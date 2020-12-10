@@ -7,7 +7,7 @@ public class Shop {
 
     private final List<Customer> customers = new ArrayList<>();
 
-    private final MailRoom mailRoom = new MailRoom();
+    private final MailRoom mailRoom = new MailRoom(this);
 
     private final CashDesk cashDesk = new CashDesk();
 

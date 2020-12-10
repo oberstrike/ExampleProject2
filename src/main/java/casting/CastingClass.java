@@ -13,7 +13,7 @@ public class CastingClass {
         //relational operators - Vergleichsoperatoren (==)
 
         //logical operators - Logische Operatoren
-        boolean isTrue = true && true;
+        boolean isTrue = true || false;
 
 
         //.

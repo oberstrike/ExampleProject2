@@ -1,7 +1,8 @@
 package animals;
 
 public interface Animal {
-    void sayHello();}
+    void sayHello();
+}
 
 
 
