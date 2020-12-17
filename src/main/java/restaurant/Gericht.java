@@ -1,13 +1,16 @@
 package restaurant;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Gericht implements Comparable<Gericht> {
 
-    private List<Zutat> zutaten = new ArrayList<>();
+    private final List<Zutat> zutaten = new ArrayList<>();
 
-    private double preis = 1.0;
+    private final double preis = 1.0;
 
     public Gericht() {
 
@@ -24,7 +27,7 @@ public class Gericht implements Comparable<Gericht> {
     public String getName() {
         StringBuilder neuerName = new StringBuilder();
         for (Zutat zutat : zutaten) {
-            neuerName.append(zutat.getName().substring(0, 2));
+            neuerName.append(zutat.getName(), 0, 2);
         }
         return neuerName.toString();
     }
@@ -34,6 +37,7 @@ public class Gericht implements Comparable<Gericht> {
             if (!zutat.getVegan())
                 return false;
         }
+
         return true;
     }
 

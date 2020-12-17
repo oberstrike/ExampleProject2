@@ -1,15 +1,21 @@
 package customers;
 
+import customers.cash.CashDesk;
+import customers.cash.CreditInformations;
+import customers.mail.AbstractAddressable;
+import customers.mail.MailRoom;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Shop {
+public class Shop extends AbstractAddressable implements CreditInformations {
+
 
     private final List<Customer> customers = new ArrayList<>();
 
     private final MailRoom mailRoom = new MailRoom(this);
 
-    private final CashDesk cashDesk = new CashDesk();
+    private final CashDesk cashDesk = new CashDesk(this);
 
     private final List<String> allCustomerIds = new ArrayList<>();
 
@@ -39,6 +45,15 @@ public class Shop {
         }
     }
 
+    @Override
+    public String getAddress() {
+        return "shop@tk.de";
+    }
+
+    @Override
+    public String getCreditCardNumber() {
+        return "CreditCardShop1";
+    }
 
 
 

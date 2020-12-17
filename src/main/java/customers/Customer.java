@@ -1,9 +1,17 @@
 package customers;
 
-public abstract class Customer implements Addressable, CreditInformations {
+import customers.cash.CreditInformations;
+import customers.mail.AbstractAddressable;
+import customers.mail.Addressable;
+
+public abstract class Customer extends AbstractAddressable implements Addressable, CreditInformations {
     private String customerId;
     private String address;
     private String creditCardNumber;
+
+    public Customer(){
+        super();
+    }
 
     public String getCustomerId() {
         return customerId;
