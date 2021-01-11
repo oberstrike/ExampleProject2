@@ -1,10 +1,14 @@
-package customers;
+package customers.customers;
 
 import customers.cash.CreditInformations;
 import customers.mail.AbstractAddressable;
-import customers.mail.Addressable;
+/*
+1. CreditInformations - package: cash
+2. AbstractAddressable - package: mail
+3. String
 
-public abstract class Customer extends AbstractAddressable implements Addressable, CreditInformations {
+ */
+public abstract class Customer extends AbstractAddressable implements CreditInformations {
     private String customerId;
     private String address;
     private String creditCardNumber;

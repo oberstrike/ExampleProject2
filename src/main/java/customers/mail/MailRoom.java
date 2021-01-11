@@ -1,6 +1,11 @@
 package customers.mail;
 
-import customers.Shop;
+/*
+Abhängigkeiten:
+1. String - Stabil
+2. Mail - Selbstkontrolle
+3. Addressable
+ */
 
 public class MailRoom {
 
@@ -12,7 +17,7 @@ public class MailRoom {
 
     public void sendMessageTo(Addressable addressable, String paymentId) {
         Mail mail = new Mail(addressable, shop);
-        mail.sendMessage(getMessage(paymentId));
+        mail.sendMessage(getMessage(paymentId), "1234");
     }
 
     private String getMessage(String paymentId) {

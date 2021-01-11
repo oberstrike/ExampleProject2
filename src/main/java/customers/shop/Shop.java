@@ -1,7 +1,8 @@
-package customers;
+package customers.shop;
 
 import customers.cash.CashDesk;
 import customers.cash.CreditInformations;
+import customers.customers.Customer;
 import customers.mail.AbstractAddressable;
 import customers.mail.MailRoom;
 

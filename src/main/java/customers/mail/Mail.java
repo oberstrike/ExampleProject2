@@ -9,7 +9,7 @@ public class Mail {
         this.sourceAddress = sourceAddress;
     }
 
-    public void sendMessage(String message) {
+    public void sendMessage(String message, String code) {
         System.out.println("Senden der Nachricht: " + message + " von " + sourceAddress.getAddress() + " an " + targetAddress.getAddress());
         targetAddress.setMessageSent(targetAddress.getMessageSent() + 1);
         sourceAddress.setMessageSent(sourceAddress.getMessageSent() + 1);

@@ -1,5 +1,9 @@
 package customers;
 
+import customers.customers.CorporateCustomer;
+import customers.customers.PrivateCustomer;
+import customers.shop.Shop;
+
 public class ShopMain {
 
     public static void main(String[] args) {

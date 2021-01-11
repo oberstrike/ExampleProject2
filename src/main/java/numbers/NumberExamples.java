@@ -1,6 +1,14 @@
 package numbers;
 
+import patterns.MeinSingleton;
+
 public class NumberExamples {
+
+    public static void main(String[] args) {
+        MeinSingleton meinSingleton = new MeinSingleton();
+        meinSingleton.setConfiguration("Config 1");
+    }
+
 
     public static boolean isPrime(long number) {
         if(number < 0)

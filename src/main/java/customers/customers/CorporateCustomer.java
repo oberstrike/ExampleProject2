@@ -1,4 +1,4 @@
-package customers;
+package customers.customers;
 
 public class CorporateCustomer extends Customer {
 
