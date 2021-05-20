@@ -9,19 +9,23 @@ import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 public class WeatherApp {
 
+    private Map<String, List<Day>> //TODO
+
     public static void main(String[] args) throws Exception {
         String kiel_filename = "C:\\Users\\oberstrike\\Desktop\\ex\\weather_kiel.csv";
-        String wuerzburg_filename = "C:\\Users\\oberstrike\\Desktop\\ex\\weather_kiel.csv";
+        String wuerzburg_filename = "C:\\Users\\oberstrike\\Desktop\\ex\\weather_wuerzbug.csv";
 
-        WeatherApp weatherApp = new WeatherApp(kiel_filename);
+        WeatherApp weatherApp = new WeatherApp();
+        weatherApp.read(kiel_filename);
+        weatherApp.read(wuerzburg_filename);
+
     }
 
-    WeatherApp(String filename) throws Exception {
-        List<Day> days = new ArrayList<>();
-
+    public void read(String filename){
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filename))) {
             bufferedReader.readLine();
             String line;
@@ -43,6 +47,10 @@ public class WeatherApp {
                 days.add(day);
             }
         }
+    }
+
+    private String getLocation(String filename){
+        return "kiel";
     }
 
 }
