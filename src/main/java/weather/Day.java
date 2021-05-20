@@ -47,4 +47,14 @@ public class Day {
     public void setAverage(float average) {
         this.average = average;
     }
+
+    @Override
+    public String toString() {
+        return "Day{" +
+                "date=" + date +
+                ", max=" + max +
+                ", min=" + min +
+                ", average=" + average +
+                '}';
+    }
 }
